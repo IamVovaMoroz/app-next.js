@@ -1,0 +1,9 @@
+/* TheFooter.module.css */
+
+.container {
+    background-color: black;
+    color: white;
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 1rem;
+  }
+  

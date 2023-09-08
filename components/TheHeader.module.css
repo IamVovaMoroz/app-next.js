@@ -1,0 +1,21 @@
+/* TheHeader.module.css */
+
+.container {
+    display: flex;
+    justify-content: center; /* Размещение по горизонтали по центру */
+    align-items: center;
+    background-color: black;
+    padding: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
