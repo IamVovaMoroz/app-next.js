@@ -1,6 +1,8 @@
 // "use client"
 
 import { Metadata } from "next";
+import styles from "./TheBlogStyles.module.css"; // Замените YourStyles на реальное имя вашего CSS-модуля
+
 
 async function getData(id: string) {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
@@ -33,10 +35,14 @@ export async function generateMetadata({ params:{id} }:  Props):Promise<Metadata
 
 export default async function Post({ params:{id} }:  Props) {
  const post = await getData(id)
-    return <><h1>{post.title}</h1>;
-    <p>{post.body}</p></>
+    return <>
+    <h1 className={styles.heading}>{post.title}</h1>
+      <p className={styles.body}>{post.body}</p>
+    </>
     
   }
+
+
 
 // 2 способ
 

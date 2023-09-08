@@ -1,14 +1,20 @@
 import Link from "next/link";
-import styles from "./TheHeader.module.css"; // Импортируем стили
+import styles from "./TheHeader.module.css";
 
 const TheHeader = () => {
-    return (
-        <header className={styles.container}> {/* Применяем стили */}
-            <Link href="/">Home</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/about">About</Link>
-        </header>
-    );
+  return (
+    <header className={styles.container}>
+      <Link href="/" passHref>
+        <span className={styles.link}>Home</span>
+      </Link>
+      <Link href="/blog" passHref>
+        <span className={styles.link}>Blog</span>
+      </Link>
+      <Link href="/about" passHref>
+        <span className={styles.link}>About</span>
+      </Link>
+    </header>
+  );
 };
 
 export { TheHeader };
