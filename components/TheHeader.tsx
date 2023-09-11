@@ -1,6 +1,10 @@
 import Link from "next/link";
 import styles from "./TheHeader.module.css";
 
+
+
+
+
 const TheHeader = () => {
   return (
     <header className={styles.container}>
@@ -13,8 +17,12 @@ const TheHeader = () => {
       <Link href="/about" passHref>
         <span className={styles.link}>About</span>
       </Link>
+      <Link href="/catalog" passHref>
+        <span className={styles.link}>Catalog</span>
+      </Link>
     </header>
   );
 };
 
 export { TheHeader };
+

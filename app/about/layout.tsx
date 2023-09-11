@@ -10,6 +10,7 @@ export default function AboutLayout({
         <ul>
             <li><Link href="/about/contact">Contacts</Link></li>
             <li><Link href="/about/team">Team</Link></li>
+            <li><Link href="/about/news">News</Link></li>
         </ul>
         {children}
     </div>

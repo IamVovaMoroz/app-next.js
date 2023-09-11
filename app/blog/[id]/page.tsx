@@ -1,4 +1,6 @@
-// "use client"
+
+
+// 2 способ
 
 import { Metadata } from "next";
 import styles from "./TheBlogStyles.module.css"; // Замените YourStyles на реальное имя вашего CSS-модуля
@@ -43,15 +45,3 @@ export default async function Post({ params:{id} }:  Props) {
   }
 
 
-
-// 2 способ
-
-//   type Props = {
-//     params: { id: string };
-//   };
-
-//    export default function Post({ params }: Props) {
-//   const { id } = params;
-
-//   return <h1>Post page {id}</h1>;
-// }
