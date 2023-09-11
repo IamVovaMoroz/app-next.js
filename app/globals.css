@@ -19,6 +19,7 @@
 body {
   background-color: #ccc8c8a2; /* Черный цвет фона */
   color: #130f0f; /* Белый цвет текста */
+  font-family: 'Titillium Web';
 }
 
 main {
