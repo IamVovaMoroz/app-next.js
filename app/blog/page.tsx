@@ -89,10 +89,6 @@ import { Metadata } from "next";
 import styles from './Blog.module.css';
 import UseClientLogic from "../../components/Blog";
 
-export const metadata: Metadata = {
-  title: "Blog | Next App",
-  description: "About my page",
-};
 
 export default function Blog() {
   const [posts, setPosts] = useState<any[]>([]);
