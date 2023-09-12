@@ -4,13 +4,13 @@ import React, { useEffect, useState } from "react";
 import { PostSearch } from "@/components/PostSearch";
 import { Posts } from "@/components/Posts";
 import { getAllPosts } from "@/services/getPosts";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import styles from './../app/blog/Blog.module.css';
 
-export const metadata: Metadata = {
-  title: "Blog | Next App",
-  description: "About my page",
-};
+// export const metadata: Metadata = {
+//   title: "Blog | Next App",
+//   description: "About my page",
+// };
 
 export default function BlogLogic() {
   const [posts, setPosts] = useState<any[]>([]);
