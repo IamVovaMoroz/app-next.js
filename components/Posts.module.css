@@ -1,26 +1,22 @@
 /* Posts.module.css */
 
-/* Стили для списка постов */
-ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  /* Стили для отдельного элемента списка */
-  li {
-    margin-bottom: 10px;
-  }
-  
-  /* Стили для ссылки на пост */
-  a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
-  /* Стили для ссылки на пост при наведении */
-  a:hover {
-    text-decoration: underline;
-  }
-  
+/* Добавьте класс "list" к селектору ul */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.list a:hover {
+  text-decoration: underline;
+}
