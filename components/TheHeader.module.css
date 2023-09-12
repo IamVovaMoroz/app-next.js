@@ -1,29 +1,12 @@
 /* TheHeader.module.css */
 
-.container {
+.header {
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: black;
   padding: 1rem;
 }
 
-.link {
-  text-decoration: none;
-  color: white;
-  margin: 0 1rem;
-  font-size: 1.2rem;
-  display: flex; /* Добавляем flex-контейнер для выравнивания */
-  align-items: center; /* Выравниваем элементы по вертикали */
-}
-
-/* .link:hover {
-  text-decoration: underline;
-} */
-
-
-
-/* Стили для изображения */ /* Расстояние между изображением и текстом */
-.link img {
-  margin-right: 6rem; 
+.logo {
+  margin-left: 1rem; /* Расстояние между логотипом и навигацией */
 }

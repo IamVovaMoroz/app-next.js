@@ -12,7 +12,7 @@
   text-decoration: none;
   color: white;
   margin: 0 1rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .link:hover {
@@ -20,8 +20,9 @@
 }
 
 .activeLink {
+  font-size: 1.6rem;
   /* Стили для активной ссылки */
   font-weight: bold; /* Жирный текст */
-  color: yellow; /* Желтый цвет для активной ссылки */
+  color: rgb(90, 86, 119); /* Желтый цвет для активной ссылки */
   /* Дополнительные стили по вашему выбору */
 }
