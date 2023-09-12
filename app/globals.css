@@ -19,7 +19,7 @@
 body {
   background-color: #ccc8c8a2; /* Черный цвет фона */
   color: #130f0f; /* Белый цвет текста */
-  font-family: 'Titillium Web';
+  /* font-family: 'Titillium Web'; */
 }
 
 main {
@@ -48,6 +48,8 @@ main a:hover {
   padding-right: 2rem;
   margin: 0 auto;
 }
+
+
 
 /* Добавляем стили для всех заголовков h1, h2, h3, h4, h5, h6 */
 h1,
