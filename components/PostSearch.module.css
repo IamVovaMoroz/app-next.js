@@ -1,12 +1,14 @@
 /* PostSearch.module.css */
 
 /* Стили для контейнера компонента */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+.container input[type="search"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+}
   
   /* Стили для текстового поля ввода */
   input[type="search"] {

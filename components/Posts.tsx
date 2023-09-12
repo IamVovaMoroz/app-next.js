@@ -1,5 +1,5 @@
-import Link from "next/link"
-import styles from './Posts.module.css'; // Импорт файлов стилей
+import Link from "next/link";
+import styles from './Posts.module.css';
 
 type Props = {
     posts: any[]
@@ -7,10 +7,12 @@ type Props = {
 
 const Posts = ({ posts }: Props) => {
     return (
-        <ul className={styles.list}>
+        <ul className={styles['posts-list']}>
             {posts.map((post: any) => (
-                <li key={post.id} className={styles.item}>
-                    <Link href={`/blog/${post.id}`} className={styles.link}>{post.title}</Link>
+                <li key={post.id} className={styles['post-item']}>
+                    <Link href={`/blog/${post.id}`} className={styles['post-link']}>
+                        {post.title}
+                    </Link>
                 </li>
             ))}
         </ul>
@@ -18,6 +20,7 @@ const Posts = ({ posts }: Props) => {
 }
 
 export { Posts }
+
 
 // вариант с swr
 
