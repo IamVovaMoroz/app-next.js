@@ -1,22 +1,45 @@
-// UseClientLogic.tsx
-"use client"
-import React, { useState, useEffect } from "react";
+// BlogLogic.tsx
+"use client";
+import React, { useEffect, useState } from "react";
+import { PostSearch } from "@/components/PostSearch";
+import { Posts } from "@/components/Posts";
 import { getAllPosts } from "@/services/getPosts";
+import { Metadata } from "next";
+import styles from './../app/blog/Blog.module.css';
 
-export default function UseClientLogic(setPosts: (posts: any[]) => void) {
-  const [posts, setLocalPosts] = useState<any[]>([]);
+export const metadata: Metadata = {
+  title: "Blog | Next App",
+  description: "About my page",
+};
+
+export default function BlogLogic() {
+  const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getAllPosts()
-      .then(setLocalPosts)
-      .finally(() => setLoading(false));
+    async function fetchData() {
+      try {
+        const response = await getAllPosts();
+        setPosts(response);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
   }, []);
 
-  // Передаем полученные данные в setPosts из внешнего компонента
-  useEffect(() => {
-    setPosts(posts);
-  }, [posts, setPosts]);
-
-  return { posts: posts, loading };
+  return (
+    <div className={styles.container}>
+      <h1>Blog page</h1>
+      <PostSearch onSearch={setPosts} />
+      {loading ? (
+        <h3>loading...</h3>
+      ) : (
+        <Posts posts={posts} />
+      )}
+    </div>
+  );
 }

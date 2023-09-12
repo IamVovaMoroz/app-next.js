@@ -81,30 +81,40 @@
 
 // Blog.tsx
 // Blog.tsx
-"use client";
-import React, { useState } from "react";
-import { PostSearch } from "@/components/PostSearch";
-import { Posts } from "@/components/Posts";
-import { Metadata } from "next";
-import styles from './Blog.module.css';
-import UseClientLogic from "../../components/Blog";
+// "use client";
+// import React, { useState } from "react";
+// import { PostSearch } from "@/components/PostSearch";
+// import { Posts } from "@/components/Posts";
+// import { Metadata } from "next";
+// import styles from './Blog.module.css';
+// import UseClientLogic from "../../components/Blog";
 
+// export const metadata: Metadata = {
+//   title: "Blog | Next App",
+//   description: "About my page",
+// };
+
+// export default function Blog() {
+//   const [posts, setPosts] = useState<any[]>([]);
+
+//   // Вызываем UseClientLogic и передаем setPosts в качестве аргумента
+//   const { loading } = UseClientLogic(setPosts);
+
+//   return (
+//     <div className={styles.container}>
+//       <h1>Blog page</h1>
+//       <PostSearch onSearch={setPosts} />
+//       {loading ? (
+//         <h3>loading...</h3>
+//       ) : (
+//         <Posts posts={posts} />
+//       )}
+//     </div>
+//   );
+// }
+import React from "react";
+import BlogLogic from "../../components/Blog";
 
 export default function Blog() {
-  const [posts, setPosts] = useState<any[]>([]);
-
-  // Вызываем UseClientLogic и передаем setPosts в качестве аргумента
-  const { loading } = UseClientLogic(setPosts);
-
-  return (
-    <div className={styles.container}>
-      <h1>Blog page</h1>
-      <PostSearch onSearch={setPosts} />
-      {loading ? (
-        <h3>loading...</h3>
-      ) : (
-        <Posts posts={posts} />
-      )}
-    </div>
-  );
+  return <BlogLogic />;
 }
