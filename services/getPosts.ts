@@ -2,6 +2,8 @@
 
 export const getAllPosts = async () => {
     try {
+      
+
       // const response = await fetch("http://jsonplaceholder.typicode.com/posts");
       const response = await fetch("/api/posts");
   

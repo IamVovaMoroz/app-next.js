@@ -4,6 +4,9 @@ import { posts } from "./posts";
 
 // Запрос GET
 export async function GET (req: Request){
+
+
+
 // получаем то что пользователь вводит
     const {searchParams} = new URL(req.url)
 // ("q")любое название перед началом того что полтзовател  вводит
