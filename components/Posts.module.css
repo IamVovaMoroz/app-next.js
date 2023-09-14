@@ -1,7 +1,7 @@
-/* Posts.module.css */
+/* Posts.module.css
 
 /* Добавьте класс "list" к селектору ul */
-.list {
+/* .list {
   list-style: none;
   padding: 0;
 }
@@ -19,4 +19,38 @@
 
 .list a:hover {
   text-decoration: underline;
+} */ 
+
+/* Posts.module.css */
+
+/* Стили для списка постов */
+.posts-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Стили для элементов списка (постов) */
+.post-item {
+  margin-bottom: 20px;
+  background-color: #f5f5f5; /* Цвет фона поста */
+  border: 1px solid #ddd; /* Граница вокруг поста */
+  padding: 10px;
+}
+
+/* Стили для ссылок на посты */
+.post-link {
+  text-decoration: none;
+  color: #333; /* Цвет текста ссылки */
+}
+
+/* Стили для заголовка поста */
+.post-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Стили для текста поста */
+.post-body {
+  font-size: 16px;
+  margin: 10px 0;
 }

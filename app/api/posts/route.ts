@@ -11,10 +11,13 @@ export async function GET (req: Request){
 // наши посты текущие берём из масива
     let currentPosts = posts
 // если приходит запрос query то фильтруем наши посты, чтобы соответсвовало тому что в запросе
-if(query)
-currentPosts = posts.filter(posts => posts.title.toLowerCase().includes(query.toLowerCase()))
-//  возвращаем поиск по постам
-    return NextResponse.json(currentPosts)
+if (query) {
+    currentPosts = posts.filter((post) =>
+      post.title.toLowerCase() === query.toLowerCase()
+    );
+  }
+
+  return NextResponse.json(currentPosts);
 }
 
 // запрос POST
