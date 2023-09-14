@@ -1,6 +1,9 @@
+
+
 export const getAllPosts = async () => {
     try {
-      const response = await fetch("http://jsonplaceholder.typicode.com/posts");
+      // const response = await fetch("http://jsonplaceholder.typicode.com/posts");
+      const response = await fetch("/api/posts");
   
       if (!response.ok) {
         throw new Error("Unable to fetch");
@@ -16,8 +19,8 @@ export const getAllPosts = async () => {
   
   export const getPostsBySearch = async (search: string) => {
     try {
-      const response = await fetch(`http://jsonplaceholder.typicode.com/posts?q=${search}`);
-  
+      // const response = await fetch(`http://jsonplaceholder.typicode.com/posts?q=${search}`);
+      const response = await fetch(`api/posts?q=${search}`);
       if (!response.ok) {
         throw new Error("Unable to fetch by search");
       }
@@ -29,4 +32,22 @@ export const getAllPosts = async () => {
       throw error;
     }
   };
+
   
+// export const getAllPosts = async () => {
+//   const response = await fetch("/api/posts");
+// console.log(response)
+//   if (!response.ok) throw new Error("Unable to fetch posts.");
+
+//   return response.json();
+// };
+
+// export const getPostsBySearch = async (search: string) => {
+//   const response = await fetch(
+//     `/api/posts?q=${search}`
+//   );
+
+//   if (!response.ok) throw new Error("Unable to fetch posts.");
+
+//   return response.json();
+// };
