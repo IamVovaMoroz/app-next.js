@@ -36,3 +36,5 @@ export async function DELETE(req: Request, {params}: {params: {id: string}}) {
 //     const message = `Пост с номером ${id} был удален`;
 //     return NextResponse.json({ message });
 // }
+
+// *  
